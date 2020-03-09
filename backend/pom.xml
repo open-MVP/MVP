@@ -5,12 +5,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>xyz.adrianweb</groupId>
-    <artifactId>openMVP-backend</artifactId>
+    <artifactId>backend</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
         <spring.version>2.2.5.RELEASE</spring.version>
         <java.version>11</java.version>
+        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
@@ -32,6 +35,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring.version}</version>
             </plugin>
         </plugins>
     </build>
