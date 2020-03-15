@@ -9,13 +9,6 @@
     <artifactId>open-mvp</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
-    <properties>
-        <java.version>13</java.version>
-        <maven.compiler.target>13</maven.compiler.target>
-        <maven.compiler.source>13</maven.compiler.source>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -25,22 +18,5 @@
     <modules>
         <module>backend</module>
     </modules>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.5.1</version>
-                <configuration>
-                    <source>13</source>
-                    <target>13</target>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
+    
 </project>
