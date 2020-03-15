@@ -1,1 +1,1 @@
-web: java -jar backend/target/backend.jar
+web: java $JAVA_OPTS -jar target/*.jar $PORT
