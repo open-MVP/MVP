@@ -8,7 +8,6 @@
         <groupId>xyz.adrianweb</groupId>
         <artifactId>open-mvp</artifactId>
         <version>1.0.0-SNAPSHOT</version>
-        <!--        <relativePath>../pom.xml</relativePath>-->
     </parent>
 
     <artifactId>backend</artifactId>
