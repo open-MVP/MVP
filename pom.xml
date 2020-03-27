@@ -18,5 +18,14 @@
     <modules>
         <module>backend</module>
     </modules>
+	
+	<distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub OPEN-MVP Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/open-MVP/MVP</url>
+        </repository>
+    </distributionManagement>
+
 
 </project>
