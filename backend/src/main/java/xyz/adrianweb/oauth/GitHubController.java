@@ -1,4 +1,4 @@
-package xyz.adrianweb.controller;
+package xyz.adrianweb.oauth;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import org.springframework.core.ParameterizedTypeReference;
@@ -31,14 +31,14 @@ public class GitHubController {
   }
 
   @GetMapping
-  public String index(@RegisteredOAuth2AuthorizedClient OAuth2AuthorizedClient authorizedClient,
-                      @AuthenticationPrincipal OAuth2User oauth2User,
-                      Model model) {
+    public String index(@RegisteredOAuth2AuthorizedClient OAuth2AuthorizedClient authorizedClient,
+            @AuthenticationPrincipal OAuth2User oauth2User,
+            Model model) {
 
-    model.addAttribute("repositories", fetchAllRepositories(authorizedClient));
-    model.addAttribute("username", oauth2User.getAttributes().get("login"));
+      model.addAttribute("repositories", fetchAllRepositories(authorizedClient));
+      model.addAttribute("username", oauth2User.getAttributes().get("login"));
 
-    return "index";
+      return "index";
   }
 
   private Flux<String> fetchAllRepositories(OAuth2AuthorizedClient authorizedClient) {
