@@ -15,7 +15,7 @@
     <packaging>jar</packaging>
 
     <properties>
-        <docker.image.prefix>open-MVP</docker.image.prefix>
+        <docker.image.prefix>openmvp</docker.image.prefix>
     </properties>
 
     <distributionManagement>
@@ -115,6 +115,7 @@
                     </execution>
                 </executions>
                 <configuration>
+                    <dockerfile>Dockerfile</dockerfile>
                     <repository>${docker.image.prefix}/${project.artifactId}</repository>
                     <buildArgs>
                         <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>

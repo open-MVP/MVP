@@ -1,4 +1,4 @@
-version: "3"
+version: "3.7"
 services:
   mongodb:
     image: mongo:4.2
@@ -6,9 +6,13 @@ services:
     ports:
       - 27017:27017
   app:
-    image: open-MVP/backend
+    image: openmvp/backend
     ports:
       - 8080:8080
+    environment:
+      MONGODB_URI: mongodb://mongodb:27017/users
+      GITHUB_ID: ${GITHUB_ID}
+      GITHUB_SECRET: ${GITHUB_SECRET}
     working_dir: /opt/app
     depends_on:
       - mongodb
