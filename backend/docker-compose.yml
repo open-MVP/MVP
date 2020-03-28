@@ -1,0 +1,14 @@
+version: "3"
+services:
+  mongodb:
+    image: mongo:4.2
+    container_name: "mongodb"
+    ports:
+      - 27017:27017
+  app:
+    image: open-MVP/backend
+    ports:
+      - 8080:8080
+    working_dir: /opt/app
+    depends_on:
+      - mongodb
