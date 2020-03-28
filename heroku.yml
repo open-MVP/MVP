@@ -1,5 +1,3 @@
 build:
   docker:
     web: backend/Dockerfile
-  run:
-    web: java -jar target/backend.jar
