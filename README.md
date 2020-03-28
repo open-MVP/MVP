@@ -5,7 +5,7 @@ Open Source MVP (JAVA,ANGULAR,FLUTTER)
 
 (Heroku Free apps sleep automatically after 30 mins of inactivity)
 
-## Docker : https://hub.docker.com/r/adrianwebxyz/open-mvp
+## Docker : https://hub.docker.com/r/openmvp/open-mvp
 
 ### API Documentation: https://open-mvp.herokuapp.com/documentation.html
 
