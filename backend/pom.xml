@@ -1,128 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns="http://maven.apache.org/POM/4.0.0"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>xyz.adrianweb</groupId>
-        <artifactId>open-mvp</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
-    </parent>
+  <parent>
+    <artifactId>open-mvp</artifactId>
+    <groupId>xyz.adrianweb</groupId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
 
-    <artifactId>backend</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+  <packaging>jar</packaging>
+  <artifactId>backend</artifactId>
+  <version>1.0-SNAPSHOT</version>
 
-    <properties>
-        <docker.image.prefix>openmvp</docker.image.prefix>
-    </properties>
+  <properties>
+    <docker.image.prefix>openmvp</docker.image.prefix>
+  </properties>
+  <dependencies>
+    <dependency>
+      <artifactId>spring-boot-starter-webflux</artifactId>
+      <groupId>org.springframework.boot</groupId>
+    </dependency>
+    <dependency>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <groupId>org.springframework.boot</groupId>
+      <scope>test</scope>
+    </dependency>
 
-    <distributionManagement>
-        <repository>
-            <id>github</id>
-            <name>GitHub OPEN-MVP Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/open-MVP/MVP</url>
-        </repository>
-    </distributionManagement>
+    <dependency>
+      <artifactId>spring-boot-starter-data-mongodb-reactive</artifactId>
+      <groupId>org.springframework.boot</groupId>
+    </dependency>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-webflux</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
+    <!--Lombok-->
+    <dependency>
+      <artifactId>lombok</artifactId>
+      <groupId>org.projectlombok</groupId>
+      <scope>provided</scope>
+      <version>1.18.12</version>
+    </dependency>
+    <!--End Lombok-->
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-mongodb-reactive</artifactId>
-        </dependency>
+    <!--Swagger-->
+    <dependency>
+      <artifactId>springdoc-openapi-webflux-ui</artifactId>
+      <groupId>org.springdoc</groupId>
+      <version>1.2.32</version>
+    </dependency>
+    <!--End swagger-->
 
-        <!--Lombok-->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.12</version>
-            <scope>provided</scope>
-        </dependency>
-        <!--End Lombok-->
+    <!--Security and Oauth-->
+    <dependency>
+      <artifactId>spring-boot-starter-security</artifactId>
+      <groupId>org.springframework.boot</groupId>
+    </dependency>
+    <dependency>
+      <artifactId>spring-security-oauth2-client</artifactId>
+      <groupId>org.springframework.security</groupId>
+    </dependency>
+    <dependency>
+      <artifactId>spring-security-oauth2-jose</artifactId>
+      <groupId>org.springframework.security</groupId>
+    </dependency>
+    <dependency>
+      <artifactId>jjwt</artifactId>
+      <groupId>io.jsonwebtoken</groupId>
+      <version>0.9.0</version>
+    </dependency>
+    <!-- End Spring Security OAUTH-->
 
-        <!--Swagger-->
-        <dependency>
-            <groupId>org.springdoc</groupId>
-            <artifactId>springdoc-openapi-webflux-ui</artifactId>
-            <version>1.2.32</version>
-        </dependency>
-        <!--End swagger-->
+    <!-- debugging -->
+    <dependency>
+      <artifactId>spring-boot-devtools</artifactId>
+      <groupId>org.springframework.boot</groupId>
+      <optional>true</optional>
+    </dependency>
 
-        <!--Security and Oauth-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-oauth2-client</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-oauth2-jose</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt</artifactId>
-            <version>0.9.0</version>
-        </dependency>
-        <!-- End Spring Security OAUTH-->
+    <!--Thymeleaf-->
+    <dependency>
+      <artifactId>spring-boot-starter-thymeleaf</artifactId>
+      <groupId>org.springframework.boot</groupId>
+    </dependency>
+    <!--End Tymeleaf-->
+  </dependencies>
 
-        <!-- debugging -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <optional>true</optional>
-        </dependency>
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>GitHub OPEN-MVP Apache Maven Packages</name>
+      <url>https://maven.pkg.github.com/open-MVP/MVP</url>
+    </repository>
+  </distributionManagement>
 
-        <!--Thymeleaf-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency>
-        <!--End Tymeleaf-->
-    </dependencies>
+  <build>
+    <finalName>backend</finalName>
+    <plugins>
+      <plugin>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <groupId>org.springframework.boot</groupId>
+      </plugin>
+    </plugins>
+  </build>
 
-    <build>
-        <finalName>backend</finalName>
+  <profiles>
+    <profile>
+      <id>docker</id>
+      <build>
         <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>com.spotify</groupId>
-                <artifactId>dockerfile-maven-plugin</artifactId>
-                <version>1.4.13</version>
-                <executions>
-                    <execution>
-                        <id>build-image</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>build</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <dockerfile>Dockerfile</dockerfile>
-                    <repository>${docker.image.prefix}/${project.artifactId}</repository>
-                    <buildArgs>
-                        <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
-                    </buildArgs>
-                </configuration>
-            </plugin>
+          <plugin>
+            <artifactId>dockerfile-maven-plugin</artifactId>
+            <configuration>
+              <buildArgs>
+                <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
+              </buildArgs>
+              <dockerfile>Dockerfile</dockerfile>
+              <repository>${docker.image.prefix}/${project.artifactId}</repository>
+            </configuration>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>build</goal>
+                </goals>
+                <id>build-image</id>
+                <phase>package</phase>
+              </execution>
+            </executions>
+            <groupId>com.spotify</groupId>
+            <version>1.4.13</version>
+          </plugin>
         </plugins>
-    </build>
+      </build>
+    </profile>
+  </profiles>
 
 </project>
