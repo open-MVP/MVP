@@ -2,4 +2,4 @@ build:
   docker:
     web: backend/Dockerfile
   run:
-    web: java -jar target/backend.jar
+    web: java $JAVA_OPTS -jar backend/target/*.jar $PORT
