@@ -13,7 +13,7 @@ Open Source MVP (JAVA,ANGULAR,FLUTTER)
 
 ### Build your MVP faster with the help of this project. Backend with JAVA 13 microservices and Spring Boot (Webflux and NoSql or SQL database connection) Frontend Angular application Mobile app with Flutter ready to build on Android and IOS.
 
-Project link: https://github.com/orgs/open-MVP/projects/1
+Project link: https://github.com/orgs/open-MVP/projects/
 
 Feel free to request features and make pull requests!
 
